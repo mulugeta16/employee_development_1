@@ -15,8 +15,9 @@ describe 'Validation test' do
   end
   context 'If the task Title and details are described' do
         it 'Validation passes' do
-          task = FactoryBot.create(:task)
+          task = Task.new(name: 'Task', description: 'Test success')
           expect(task).to be_valid
         end
       end
-    end
+end
+end
